@@ -10,6 +10,8 @@
   "dependencies": {
     "@apollo/client": "^3.10.8",
     "@nhost/nhost-js": "^3.0.0",
+    "@nhost/react": "^3.11.2",
+    "@nhost/react-apollo": "^18.0.2",
     "graphql": "^16.9.0",
     "next": "14.2.5",
     "react": "^18.3.1",
