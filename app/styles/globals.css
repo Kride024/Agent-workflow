@@ -1,0 +1,43 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: #0f1115;
+  color: #e7e9ee;
+}
+a { color: #7cb7ff; }
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-weight: 600;
+}
+.btn-primary { background: #4f7cff; color: white; }
+.btn-danger { background: #ff5c5c; color: white; }
+.card {
+  background: #171a21;
+  border: 1px solid #262b36;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 12px;
+}
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+}
+.status-pending { background: #33384a; }
+.status-running { background: #3552b3; }
+.status-paused { background: #a06a1c; }
+.status-succeeded { background: #1c7a3d; }
+.status-failed { background: #7a1c1c; }
+input, select, textarea {
+  background: #0f1115;
+  border: 1px solid #333947;
+  color: #e7e9ee;
+  border-radius: 6px;
+  padding: 6px 10px;
+}

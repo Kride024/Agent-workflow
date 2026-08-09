@@ -1,0 +1,17 @@
+# Scheduled trigger type: for each `workflow_triggers` row with type =
+# 'scheduled', a cron trigger polls and starts a run. In production you'd
+# generate one cron trigger per row via the Hasura API on trigger creation;
+# for the assignment scope this single poller trigger is sufficient and
+# reads config.cron off each scheduled trigger row itself.
+- name: scheduled_trigger_poller
+  webhook: "{{APP_URL}}/api/scheduled/poll"
+  schedule: "* * * * *" # every minute; handler checks each trigger's own cron config
+  include_in_metadata: true
+  payload: {}
+  headers:
+    - name: x-action-secret
+      value_from_env: ACTION_SECRET
+  retry_conf:
+    num_retries: 2
+    timeout_seconds: 60
+    tolerance_seconds: 21600
